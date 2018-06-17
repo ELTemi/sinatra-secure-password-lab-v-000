@@ -18,6 +18,7 @@ class ApplicationController < Sinatra::Base
 
   post "/signup" do
     #@user = User.new(username: params[:username], password: params[:password])
+    binding.pry
     if params[:username] == "" || params[:password] == ""
       redirect to '/failure'
     else
@@ -65,4 +66,3 @@ class ApplicationController < Sinatra::Base
       User.find(session[:user_id])
     end
   end
-
