@@ -20,7 +20,7 @@ class ApplicationController < Sinatra::Base
     #@user = User.new(username: params[:username], password: params[:password])
     binding.pry
     if params[:username] == "" || params[:password] == ""
-      redirect to '/failure'
+      redirect '/failure'
     else
       binding.pry
       @user = User.create(username: params[:username], password: params[:password])
